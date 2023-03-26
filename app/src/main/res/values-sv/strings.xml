@@ -20,7 +20,7 @@
     <string name="color_pink">Rosa</string>
     <string name="color_purple">Lila</string>
     <string name="color_blue">Blå</string>
-    <string name="color_teal">Kricka</string>
+    <string name="color_teal">Turkos</string>
     <string name="color_green">Grön</string>
     <string name="color_lime">Limegrön</string>
     <string name="color_yellow">Gul</string>
@@ -39,7 +39,7 @@
     <string name="menu_edit">Redigera</string>
     <string name="menu_closeTab">Stäng flik</string>
     <string name="menu_download">Öppna nedladdningar</string>
-    <string name="menu_fav">Set as start site</string>
+    <string name="menu_fav">Spara som favorit</string>
     <string name="menu_sc">Genväg på hemskärmen</string>
     <string name="menu_sort">Sortera efter …</string>
     <string name="menu_filter">Filtrera på …</string>
