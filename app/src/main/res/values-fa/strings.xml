@@ -133,7 +133,7 @@
     <string name="setting_title_reload">برای بارگیری مجدد انگشت خود را به پایین بکشید</string>
     <string name="setting_title_searchEngine">موتور جستجوی سفارشی</string>
     <string name="setting_title_userAgent">سفارشی سازی نماینده کاربری </string>
-    <string name="setting_title_clipboard_record">Clipboard record</string>
+    <string name="setting_title_clipboard_record">ثبت بریده‌دان</string>
     <string name="setting_title_fingerPrint">محافظت به وسیله اثرانگشت</string>
     <string name="setting_theme">پوسته</string>
     <string name="setting_theme_system">سامانه</string>
