@@ -1,3 +1,10 @@
+###
+- moved repo from Github zu Codeberg
+- moved from crowdin to weblate
+- fix: cookies on tab change
+- updated translations
+
+
 ### v 9.11 "Traven"
 - new: context menu in tab overview
 - new: icons in menus
