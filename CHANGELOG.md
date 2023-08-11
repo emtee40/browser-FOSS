@@ -1,4 +1,4 @@
-###
+### v 9.12 "Clara Zetkin" (WIP)
 - moved repo from Github zu Codeberg
 - moved from crowdin to weblate
 - fix: cookies on tab change
