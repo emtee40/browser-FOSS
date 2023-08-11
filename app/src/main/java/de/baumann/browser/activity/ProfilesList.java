@@ -219,7 +219,7 @@ public class ProfilesList extends AppCompatActivity {
 
         if (menuItem.getItemId() == android.R.id.home) finish();
         else if (menuItem.getItemId() == R.id.menu_help) {
-            Uri webpage = Uri.parse("https://github.com/scoute-dich/browser/wiki/Profile-list");
+            Uri webpage = Uri.parse("https://codeberg.org/Gaukler_Faun/FOSS_Browser/wiki/Profile-list");
             BrowserUnit.intentURL(this, webpage);
         }
         return true;

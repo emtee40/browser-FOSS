@@ -734,7 +734,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
                     else if (item.getItemId() == R.id.menu_filter) {
                         showDialogFilter(); }
                     else if (item.getItemId() == R.id.menu_help) {
-                        Uri webpage = Uri.parse("https://github.com/scoute-dich/browser/wiki/Overview");
+                        Uri webpage = Uri.parse("https://codeberg.org/Gaukler_Faun/FOSS_Browser/wiki/Overview");
                         BrowserUnit.intentURL(this, webpage); }
                     return true;
                 });
@@ -2008,7 +2008,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
             Button button_help = dialogView.findViewById(R.id.button_help);
             button_help.setOnClickListener(view -> {
                 dialog.cancel();
-                Uri webpage = Uri.parse("https://github.com/scoute-dich/browser/wiki/Fast-Toggle-Dialog");
+                Uri webpage = Uri.parse("https://codeberg.org/Gaukler_Faun/FOSS_Browser/wiki/Fast-Toggle-Dialog");
                 BrowserUnit.intentURL(this, webpage);
             });
         } else {

@@ -54,7 +54,7 @@ public class Settings_Gesture extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         if (menuItem.getItemId() == android.R.id.home) finish();
         if (menuItem.getItemId() == R.id.menu_help) {
-            Uri webpage = Uri.parse("https://github.com/scoute-dich/browser/wiki/Gestures");
+            Uri webpage = Uri.parse("https://codeberg.org/Gaukler_Faun/FOSS_Browser/wiki/Gestures");
             BrowserUnit.intentURL(this, webpage);
         }
         return true;
