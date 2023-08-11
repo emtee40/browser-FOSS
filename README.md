@@ -1,10 +1,10 @@
-![FOSS Browser logo](https://github.com/scoute-dich/browser/blob/master/graphics/featuresGrafic.png)
+![FOSS Browser logo](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/graphics/featuresGrafic.png)
 
 "FOSS Browser" is a fully free (as in freedom) open source Android browser: privacy-friendly with a modern user interface. _- Your privacy - your data._
 
 ----
 
-__[WIKI](https://github.com/scoute-dich/browser/wiki) | [FAQs](https://github.com/scoute-dich/browser/blob/master/FAQs.md) | [Releases](https://github.com/scoute-dich/browser/releases) | [Changelog](https://github.com/scoute-dich/browser/blob/master/CHANGELOG.md) | [Privacy Policy](https://github.com/scoute-dich/browser/blob/master/PRIVACY.md) | [License](https://github.com/scoute-dich/browser/blob/master/LICENSE.md) | [Code of conduct](https://github.com/scoute-dich/browser/blob/master/CODE_OF_CONDUCT.md) | [Contributing](https://github.com/scoute-dich/browser/blob/master/CONTRIBUTING.md) | [Help translating](https://crowdin.com/project/foss-browser)__
+__[WIKI](https://codeberg.org/Gaukler_Faun/FOSS_Browser/wiki) | [FAQs](https://codeberg.org/Gaukler_Faun/FOSS_Browser/blob/master/FAQs.md) | [Releases](https://codeberg.org/Gaukler_Faun/FOSS_Browser/releases) | [Changelog](https://codeberg.org/Gaukler_Faun/FOSS_Browser/blob/master/CHANGELOG.md) | [Privacy Policy](https://codeberg.org/Gaukler_Faun/FOSS_Browser/blob/master/PRIVACY.md) | [License](https://codeberg.org/Gaukler_Faun/FOSS_Browser/blob/master/LICENSE.md) | [Code of conduct](https://codeberg.org/Gaukler_Faun/FOSS_Browser/blob/master/CODE_OF_CONDUCT.md) | [Contributing](https://codeberg.org/Gaukler_Faun/FOSS_Browser/blob/master/CONTRIBUTING.md) | [Help translating](https://crowdin.com/project/foss-browser)__
 
 <img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="50"/></a>[![Donate](https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NP6TGYDYP9SHY)
 [![Crowdin](https://badges.crowdin.net/foss-browser/localized.svg)](https://crowdin.com/project/foss-browser) <a href="https://f-droid.org/packages/de.baumann.browser/" target="_blank">
@@ -12,12 +12,11 @@ __[WIKI](https://github.com/scoute-dich/browser/wiki) | [FAQs](https://github.co
 ----
 ### UI/Handling
 
-FOSS Browser uses the latest [Material You](https://m3.material.io/) design libraries. Following system day/night mode and a wallpaper based theme are just two features of this new library. The UI is optimized for one-hand-use. All UI-elements are at the bottom of the screen.
+FOSS Browser uses the latest Material You design libraries. Following system day/night mode and a wallpaper based theme are just two features of this new library. The UI is optimized for one-hand-use. All UI-elements are at the bottom of the screen.
 
 
 _More features:_
 
-- Play audio on background.
 - Keep screen on.
 - Open links in background.
 - Restore tabs on restart.
@@ -34,7 +33,7 @@ _More privacy features:_
 - Enable or disable Android-autofill.
 - Delete browser data (on app exit).
 - Choose between different search engines (or set a custom one).
-- FOSS Browser itself doesn't collect any data: [Privacy policy](https://github.com/scoute-dich/browser/blob/master/PRIVACY.md)
+- FOSS Browser itself doesn't collect any data: [Privacy policy](https://codeberg.org/Gaukler_Faun/FOSS_Browser/blob/master/PRIVACY.md)
 
 ----
 ### Bookmarks filter
