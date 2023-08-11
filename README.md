@@ -1,9 +1,7 @@
-<img src="https://codeberg.org/Gaukler_Faun/FOSS_Browser/raw/branch/master/graphics/featuresGrafic.png" alt="Settings Backup"/>
+<p align="center">
+<img src="https://codeberg.org/Gaukler_Faun/FOSS_Browser/raw/branch/master/graphics/featuresGrafic.png" alt="Settings Backup" width="600"/>
+</p>
 
-# FOSS Browser
-is a fully free (as in freedom) open source Android browser: privacy-friendly with a modern user interface. _- Your privacy. your data._
-
-----
 ### Useful links
 
 __[WIKI](https://codeberg.org/Gaukler_Faun/FOSS_Browser/wiki) | [FAQs](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/FAQs.md) | [Releases](https://codeberg.org/Gaukler_Faun/FOSS_Browser/releases) | [Changelog](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/CHANGELOG.md) | [Privacy Policy](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/PRIVACY.md) | [License](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/LICENSE.md) | [Code of conduct](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/CODE_OF_CONDUCT.md) | [Contributing](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/CONTRIBUTING.md) | [Help translating](https://translate.codeberg.org/projects/foss-browser/)__
