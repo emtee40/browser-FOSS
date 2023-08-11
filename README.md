@@ -1,13 +1,12 @@
-![FOSS Browser logo](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/graphics/featuresGrafic.png)
-
-"FOSS Browser" is a fully free (as in freedom) open source Android browser: privacy-friendly with a modern user interface. _- Your privacy - your data._
+# FOSS Browser
+is a fully free (as in freedom) open source Android browser: privacy-friendly with a modern user interface. _- Your privacy - your data._
 
 ----
 
 __[WIKI](https://codeberg.org/Gaukler_Faun/FOSS_Browser/wiki) | [FAQs](https://codeberg.org/Gaukler_Faun/FOSS_Browser/blob/master/FAQs.md) | [Releases](https://codeberg.org/Gaukler_Faun/FOSS_Browser/releases) | [Changelog](https://codeberg.org/Gaukler_Faun/FOSS_Browser/blob/master/CHANGELOG.md) | [Privacy Policy](https://codeberg.org/Gaukler_Faun/FOSS_Browser/blob/master/PRIVACY.md) | [License](https://codeberg.org/Gaukler_Faun/FOSS_Browser/blob/master/LICENSE.md) | [Code of conduct](https://codeberg.org/Gaukler_Faun/FOSS_Browser/blob/master/CODE_OF_CONDUCT.md) | [Contributing](https://codeberg.org/Gaukler_Faun/FOSS_Browser/blob/master/CONTRIBUTING.md) | [Help translating](https://crowdin.com/project/foss-browser)__
 
-<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="50"/></a>[![Donate](https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NP6TGYDYP9SHY)
-[![Crowdin](https://badges.crowdin.net/foss-browser/localized.svg)](https://crowdin.com/project/foss-browser) <a href="https://f-droid.org/packages/de.baumann.browser/" target="_blank">
+[<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="50"/>](https://f-droid.org/de/packages/de.baumann.browser/)
+[<img src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif" alt="Donate" height="50"/>](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NP6TGYDYP9SHY)
 
 ----
 ### UI/Handling
