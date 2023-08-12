@@ -1,7 +1,7 @@
 ### v 9.12 "Clara Zetkin" (WIP)
 - moved repo from Github zu Codeberg
 - moved from crowdin to weblate
-- fix: cookie settings lost on tab change
+- fix: cookie/profile settings lost on tab change #1095
 - fix: profile settings lost, when going back in history
 - fix: Not really a bug... #1075
 - fix: Menu Dialog tweaks #1086
