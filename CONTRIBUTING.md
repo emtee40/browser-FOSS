@@ -6,7 +6,7 @@ FOSS browser contributors guide.
 
 # How to contribute
 
-Great! FOSS Browser continues to improve from the contributions of its users. This could include code contributions, feature requests, and bug fixes for [FOSS Browser](https://github.com/scoute-dich/browser). 
+Great! FOSS Browser continues to improve from the contributions of its users. This could include code contributions, feature requests, and bug fixes for FOSS Browser. 
 Thank you for your interest in contributing to FOSS Browser. I appreciate all help with finding and fixing bugs, making performance improvements, and other tasks. Every contribution is helpful and I thank you for your effort. To ensure the process of contributing is as smooth as possible, here are a few guidelines for you to follow.
 
 - Remember to Create an Issue before submitting any major changes like a new feature or UI changes etc. Changes like the addition of new language or spelling mistakes don't require issue creation.
