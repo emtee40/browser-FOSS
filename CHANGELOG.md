@@ -3,6 +3,7 @@
 - moved from crowdin to weblate
 - fix: cookie settings lost on tab change
 - fix: profile settings lost, when going back in history
+- fix: Not really a bug... #1075
 - updated translations
 
 

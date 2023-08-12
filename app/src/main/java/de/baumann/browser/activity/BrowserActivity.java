@@ -19,6 +19,7 @@ import android.content.BroadcastReceiver;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
@@ -2017,6 +2018,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
     }
 
     private void showDialogFilter() {
+        sp.edit().putString("showFilterDialogX", "true").apply();
 
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
         View dialogView = View.inflate(context, R.layout.dialog_menu, null);
@@ -2027,6 +2029,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
         HelperUnit.setupDialog(context, dialog);
         CardView cardView = dialogView.findViewById(R.id.albumCardView);
         cardView.setVisibility(View.GONE);
+
 
         GridView menu_grid = dialogView.findViewById(R.id.menu_grid);
         final List<GridItem> gridList = new LinkedList<>();
@@ -2050,6 +2053,13 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
             filterBy = gridList.get(position).getData();
             dialog.cancel();
             bottom_navigation.setSelectedItemId(R.id.page_2);
+        });
+
+        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialogInterface) {
+                sp.edit().putString("showFilterDialogX", "false").apply();
+            }
         });
     }
 
