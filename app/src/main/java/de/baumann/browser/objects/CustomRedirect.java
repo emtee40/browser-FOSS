@@ -1,7 +1,7 @@
 package de.baumann.browser.objects;
 
 public class CustomRedirect {
-    public String source;
+    public final String source;
     public String target;
 
     public CustomRedirect(String source, String target) {
@@ -9,17 +9,21 @@ public class CustomRedirect {
         this.target = target;
     }
 
-    public void setSource(String source) {
-        this.source = source;
-    }
+// --Commented out by Inspection START (12.08.23, 19:37):
+//    public void setSource(String source) {
+//        this.source = source;
+//    }
+// --Commented out by Inspection STOP (12.08.23, 19:37)
 
     public String getSource() {
         return source;
     }
 
-    public void setTarget(String target) {
-        this.target = target;
-    }
+// --Commented out by Inspection START (12.08.23, 19:55):
+//    public void setTarget(String target) {
+//        this.target = target;
+//    }
+// --Commented out by Inspection STOP (12.08.23, 19:55)
 
     public String getTarget() {
         return target;

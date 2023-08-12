@@ -5,6 +5,7 @@ import static android.os.Environment.DIRECTORY_DOCUMENTS;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.widget.Button;
@@ -26,6 +27,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.channels.FileChannel;
+import java.nio.file.Files;
 import java.util.Objects;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -145,7 +147,7 @@ public class Fragment_settings_Backup extends BasePreferenceFragment {
         sp.edit().putInt("restart_changed", 1).apply();
     }
 
-    // If targetLocation does not exist, it will be created.
+    /** @noinspection IOStreamConstructor*/ // If targetLocation does not exist, it will be created.
     private void copyDirectory(File sourceLocation, File targetLocation) {
 
         try {
@@ -164,8 +166,17 @@ public class Fragment_settings_Backup extends BasePreferenceFragment {
                     throw new IOException("Cannot create dir " + directory.getAbsolutePath());
                 }
 
-                InputStream in = new FileInputStream(sourceLocation);
-                OutputStream out = new FileOutputStream(targetLocation);
+                InputStream in;
+                OutputStream out;
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    in = Files.newInputStream(sourceLocation.toPath());
+                    out = Files.newOutputStream(targetLocation.toPath());
+                } else {
+                    in = new FileInputStream(sourceLocation);
+                    out = new FileOutputStream(targetLocation);
+                }
+
                 // Copy the bits from InputStream to OutputStream
                 byte[] buf = new byte[1024];
                 int len;
@@ -181,6 +192,7 @@ public class Fragment_settings_Backup extends BasePreferenceFragment {
         }
     }
 
+    /** @noinspection resource*/
     private void backupUserPrefs(Context context) {
         final File prefsFile = new File(context.getFilesDir(), "../shared_prefs/" + context.getPackageName() + "_preferences.xml");
         final File backupFile = new File(sd, "browser_backup/preferenceBackup.xml");
@@ -196,12 +208,21 @@ public class Fragment_settings_Backup extends BasePreferenceFragment {
         }
     }
 
+    /** @noinspection IOStreamConstructor*/
     private void restoreUserPrefs(Context context) {
         final File backupFile = new File(sd, "browser_backup/preferenceBackup.xml");
         try {
             SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            InputStream inputStream = new FileInputStream(backupFile);
+
+
+            InputStream inputStream;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                inputStream = Files.newInputStream(backupFile.toPath());
+            } else {
+                inputStream = new FileInputStream(backupFile);
+            }
+
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
             Document doc = docBuilder.parse(inputStream);
