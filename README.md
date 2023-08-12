@@ -9,7 +9,17 @@
 
 ### Useful links
 
-__[WIKI](https://codeberg.org/Gaukler_Faun/FOSS_Browser/wiki) | [FAQs](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/FAQs.md) | [Releases](https://codeberg.org/Gaukler_Faun/FOSS_Browser/releases) | [Changelog](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/CHANGELOG.md) | [Privacy Policy](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/PRIVACY.md) | [License](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/LICENSE.md) | [Code of conduct](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/CODE_OF_CONDUCT.md) | [Contributing](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/CONTRIBUTING.md) | [Help translating](https://translate.codeberg.org/projects/foss-browser/)__
+- __[README](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/README.md)__ Some short informations about FOSS Browser. Just an overview.
+- __[WIKI](https://codeberg.org/Gaukler_Faun/FOSS_Browser/wiki)__ All basic settings and UI-elemts are explained here.
+- __[FAQs](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/FAQs.md)__ Yeah, the frequently asked questions!
+- __[Releases](https://codeberg.org/Gaukler_Faun/FOSS_Browser/releases)__ Here you can download the latest source code and installable apk-files.
+- __[Changelog](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/CHANGELOG.md)__ It's like a history book. See what changed about the time.
+- __[ISSUES](https://codeberg.org/Gaukler_Faun/FOSS_Browser/issues)__ You have proplems or issues? This is the right place to tell. Please don't post feature requests, since this is a one-man-show and I don't have much time.
+- __[Privacy](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/PRIVACY.md)__ In short: FOSS Browser doesn't collect any data.
+- __[License](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/LICENSE.md)__ In short: APGL. You have all of the four freedoms of free software: use, study, share and improve.
+- __[Code of conduct](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/CODE_OF_CONDUCT.md)__ Read how we talk with each other. Some very basic rules, if you want to be part of this community.
+- __[Contributing](https://codeberg.org/Gaukler_Faun/FOSS_Browser/src/branch/master/CONTRIBUTING.md)__ THere are may options to help, even if you are not a developer: reporting issues, translating, ... Here YOU can help.
+- __[Help translating](https://translate.codeberg.org/projects/foss-browser/)__ FOSS Browser is translated in over 20 languages. Help to spread FOSS Brwoser over the world! You can also request a new language.
 
 ----
 ### UI/Handling
