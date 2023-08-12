@@ -4,6 +4,7 @@
 - fix: cookie settings lost on tab change
 - fix: profile settings lost, when going back in history
 - fix: Not really a bug... #1075
+- fix: Menu Dialog tweaks #1086
 - updated translations
 
 

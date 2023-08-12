@@ -1055,9 +1055,9 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
         menu_grid_tab.setOnItemLongClickListener((arg0, arg1, position, arg3) -> {
             if (position == 0) NinjaToast.show(context, item_01.getTitle());
             else if (position == 1) NinjaToast.show(context, item_02.getTitle());
-            else if (position == 2) NinjaToast.show(context, item_03.getTitle());
-            else if (position == 3) NinjaToast.show(context, item_04.getTitle());
-            else if (position == 4) NinjaToast.show(context, item_05.getTitle());
+            else if (position == 2) NinjaToast.show(context, item_05.getTitle());
+            else if (position == 3) NinjaToast.show(context, item_03.getTitle());
+            else if (position == 4) NinjaToast.show(context, item_04.getTitle());
             else if (position == 5) NinjaToast.show(context, item_06.getTitle());
             return true;
         });
