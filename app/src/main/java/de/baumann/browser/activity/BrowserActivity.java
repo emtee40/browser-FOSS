@@ -1150,13 +1150,11 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
         GridItem item_11 = new GridItem( getString(R.string.menu_share_link), R.drawable.icon_link);
         GridItem item_12 = new GridItem( getString(R.string.dialog_postOnWebsite), R.drawable.icon_post);
         GridItem item_13 = new GridItem( getString(R.string.menu_shareClipboard), R.drawable.icon_clipboard);
-        GridItem item_14 = new GridItem( getString(R.string.menu_open_with), R.drawable.icon_open_with);
 
         final List<GridItem> gridList_share = new LinkedList<>();
         gridList_share.add(gridList_share.size(), item_11);
         gridList_share.add(gridList_share.size(), item_12);
         gridList_share.add(gridList_share.size(), item_13);
-        gridList_share.add(gridList_share.size(), item_14);
 
         GridAdapter gridAdapter_share = new GridAdapter(context, gridList_share);
         menu_grid_share.setAdapter(gridAdapter_share);
@@ -1166,7 +1164,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
             if (position == 0) NinjaToast.show(context, item_11.getTitle());
             else if (position == 1) NinjaToast.show(context, item_12.getTitle());
             else if (position == 2) NinjaToast.show(context, item_13.getTitle());
-            else if (position == 3) NinjaToast.show(context, item_14.getTitle());
             return true;
         });
 
@@ -1179,9 +1176,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
                 postLink(text, dialog_overflow);
             } else if (position == 2) {
                 copyLink(url);
-                dialog_overflow.cancel();
-            } else if (position == 3) {
-                BrowserUnit.intentURLChooser(context, Uri.parse(url));
                 dialog_overflow.cancel();
             }
         });
@@ -1325,10 +1319,9 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
         GridItem item_03 = new GridItem( getString(R.string.main_menu_new_tabProfile), R.drawable.icon_profile_trusted);
         GridItem item_04 = new GridItem( getString(R.string.menu_share_link), R.drawable.icon_link);
         GridItem item_05 = new GridItem( getString(R.string.menu_shareClipboard), R.drawable.icon_clipboard);
-        GridItem item_06 = new GridItem( getString(R.string.menu_open_with), R.drawable.icon_open_with);
-        GridItem item_07 = new GridItem( getString(R.string.menu_save_as), R.drawable.icon_save_as);
-        GridItem item_08 = new GridItem( getString(R.string.menu_save_home), R.drawable.icon_web);
-        GridItem item_09 = new GridItem( getString(R.string.menu_delete), R.drawable.icon_delete);
+        GridItem item_06 = new GridItem( getString(R.string.menu_save_as), R.drawable.icon_save_as);
+        GridItem item_07 = new GridItem( getString(R.string.menu_save_home), R.drawable.icon_web);
+        GridItem item_08 = new GridItem( getString(R.string.menu_delete), R.drawable.icon_delete);
 
         final List<GridItem> gridList = new LinkedList<>();
 
@@ -1339,10 +1332,9 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
         gridList.add(gridList.size(), item_05);
         gridList.add(gridList.size(), item_06);
         gridList.add(gridList.size(), item_07);
-        gridList.add(gridList.size(), item_08);
 
         if (showAll) {
-            gridList.add(gridList.size(), item_09);
+            gridList.add(gridList.size(), item_08);
         }
 
         GridView menu_grid = dialogView.findViewById(R.id.menu_grid);
@@ -1372,20 +1364,16 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
                     dialog.cancel();
                     break;
                 case 5:
-                    BrowserUnit.intentURLChooser(context, Uri.parse(url));
-                    dialog.cancel();
-                    break;
-                case 6:
                     if (url.startsWith("data:")) {
                         DataURIParser dataURIParser = new DataURIParser(url);
                         HelperUnit.saveDataURI(activity, finalTitle, url, dataURIParser, dialog);
                     } else HelperUnit.saveAs(activity, finalTitle,  url, null, dialog);
                     break;
-                case 7:
+                case 6:
                     save_atHome(finalTitle, url);
                     dialog.cancel();
                     break;
-                case 8:
+                case 7:
                     MaterialAlertDialogBuilder builderSubMenu = new MaterialAlertDialogBuilder(context);
                     builderSubMenu.setIcon(R.drawable.icon_alert);
                     builderSubMenu.setTitle(R.string.menu_delete);

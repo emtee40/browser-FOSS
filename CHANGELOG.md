@@ -6,6 +6,7 @@
 - fix: Not really a bug... #1075
 - fix: Menu Dialog tweaks #1086
 - fix: error warnings #1092 and #1082
+- fix: removed "open link with" from menus, since it does the same like sharing #1089
 - updated translations
 
 
