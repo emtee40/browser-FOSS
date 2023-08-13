@@ -68,6 +68,7 @@ import de.baumann.browser.database.Record;
 import de.baumann.browser.database.RecordAction;
 import de.baumann.browser.unit.BrowserUnit;
 import de.baumann.browser.unit.HelperUnit;
+import de.baumann.browser.unit.RecordUnit;
 
 public class NinjaWebView extends WebView implements AlbumController {
 
@@ -551,7 +552,7 @@ public class NinjaWebView extends WebView implements AlbumController {
         favicon = null;
         stopped = false;
 
-        if (url.startsWith("http://")) {
+        if (url.startsWith("http://") && sp.getString("dialog_neverAsk", "no").equals("no")) {
 
             GridItem item_01 = new GridItem("https://", R.drawable.icon_https);
             GridItem item_02 = new GridItem( "http://", R.drawable.icon_http);
@@ -579,6 +580,10 @@ public class NinjaWebView extends WebView implements AlbumController {
             message.setVisibility(View.VISIBLE);
             message.setText(R.string.toast_unsecured);
             FaviconHelper.setFavicon(context, dialogView, null, R.id.menu_icon, R.drawable.icon_alert);
+            builder.setPositiveButton(R.string.dialog_neverAsk, (dialog2, whichButton) -> {
+                sp.edit().putString("dialog_neverAsk", "yes").apply();
+                loadUrl(url);
+            });
             builder.setView(dialogView);
 
             AlertDialog dialog = builder.create();

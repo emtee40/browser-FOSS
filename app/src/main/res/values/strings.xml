@@ -72,6 +72,7 @@
     <string name="dialog_sortName">Sort by name</string>
     <string name="dialog_sortIcon">Sort by icon</string>
     <string name="dialog_sortDate">Sort by date</string>
+    <string name="dialog_neverAsk">Dismiss. Never ask this session.</string>
 
     <!-- Settings -->
     <string name="setting_label">Settings</string>

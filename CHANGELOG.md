@@ -1,4 +1,4 @@
-### v 9.12 "Clara Zetkin" (WIP)
+### v 10.0 "Clara Zetkin" (WIP)
 - moved repo from Github zu Codeberg
 - moved from crowdin to weblate
 - fix: cookie/profile settings lost on tab change #1095
@@ -7,6 +7,7 @@
 - fix: Menu Dialog tweaks #1086
 - fix: error warnings #1092 and #1082
 - fix: removed "open link with" from menus, since it does the same like sharing #1089
+- fix: HTTPS or HTTP dialog only asked one time per session #1083
 - updated translations
 
 

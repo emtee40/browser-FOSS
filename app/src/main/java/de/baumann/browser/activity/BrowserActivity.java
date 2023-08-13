@@ -241,7 +241,8 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
         sp.edit()
                 .putInt("restart_changed", 0)
                 .putBoolean("pdf_create", false).putBoolean("redirect", sp.getBoolean("sp_youTube_switch", false) || sp.getBoolean("sp_twitter_switch", false) || sp.getBoolean("sp_instagram_switch", false))
-                .putString("profile", sp.getString("profile_toStart", "profileStandard")).apply();
+                .putString("profile", sp.getString("profile_toStart", "profileStandard"))
+                .putString("dialog_neverAsk", "no").apply();
 
         switch (Objects.requireNonNull(sp.getString("start_tab", "3"))) {
             case "3":
