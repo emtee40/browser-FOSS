@@ -1181,7 +1181,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
                 copyLink(url);
                 dialog_overflow.cancel();
             } else if (position == 3) {
-                BrowserUnit.intentURL(context, Uri.parse(url));
+                BrowserUnit.intentURLChooser(context, Uri.parse(url));
                 dialog_overflow.cancel();
             }
         });
@@ -1372,7 +1372,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
                     dialog.cancel();
                     break;
                 case 5:
-                    BrowserUnit.intentURL(context, Uri.parse(url));
+                    BrowserUnit.intentURLChooser(context, Uri.parse(url));
                     dialog.cancel();
                     break;
                 case 6:

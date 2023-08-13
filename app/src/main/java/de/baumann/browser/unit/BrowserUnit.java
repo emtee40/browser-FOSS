@@ -200,6 +200,16 @@ public class BrowserUnit {
         context.startActivity(chooser);
     }
 
+    public static void intentURLChooser(Context context, Uri uri) {
+
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW);
+        browserIntent.setData(uri);
+        //browserIntent.setPackage("de.baumann.browser");
+        Intent chooser = Intent.createChooser(browserIntent, context.getString(R.string.menu_open_with));
+        context.startActivity(chooser);
+
+    }
+
     public static String redirectURL (WebView ninjaWebView, SharedPreferences sp, String url) {
 
         String domain = HelperUnit.domain(url);

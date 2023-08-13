@@ -122,29 +122,7 @@ public class NinjaWebView extends WebView implements AlbumController {
         this.listStandard = new List_standard(this.context);
         this.listProtected = new List_protected(this.context);
         this.album = new AdapterTabs(this.context, this, browserController);
-        this.webViewClient = new NinjaWebViewClient(this) {
-            @Override
-            public void onReceivedError(WebView webview, WebResourceRequest request, WebResourceError error) {
-                Context context = webview.getContext();
-                String description = error.getDescription().toString();
-                String failingUrl = request.getUrl().toString();
-                String message = "URL: " + failingUrl + "\n"  + context.getString(R.string.app_error) + ": " + description;
-
-                MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
-                builder.setIcon(R.drawable.icon_alert);
-                builder.setTitle(context.getString(R.string.app_error));
-                builder.setMessage(message);
-                builder.setPositiveButton(R.string.menu_reload, (dialog, whichButton) -> {
-                    dialog.cancel();
-                    reload();
-                });
-                builder.setNegativeButton(R.string.app_cancel, (dialog, whichButton) -> dialog.cancel());
-                AlertDialog dialog = builder.create();
-                dialog.show();
-                HelperUnit.setupDialog(context, dialog);
-
-            }
-        };
+        this.webViewClient = new NinjaWebViewClient(this);
         this.webChromeClient = new NinjaWebChromeClient(this);
         this.downloadListener = new NinjaDownloadListener(this.context, this);
 
