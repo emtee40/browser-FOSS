@@ -5,6 +5,7 @@
 - fix: profile settings lost, when going back in history
 - fix: Not really a bug... #1075
 - fix: Menu Dialog tweaks #1086
+- fix: error warnings #1092 and #1082
 - updated translations
 
 
