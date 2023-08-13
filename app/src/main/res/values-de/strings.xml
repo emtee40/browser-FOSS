@@ -8,7 +8,7 @@
     <string name="app_done">Fertig</string>
     <string name="app_error">Fehler</string>
     <string name="app_warning">Warnung</string>
-    <string name="app_permission">Um diese Funktion nutzen zu können, müssen Sie die Berechtigung erteilen. Danach starten Sie die App neu.</string>
+    <string name="app_permission">Um diese Funktion nutzen zu können, müssen Sie die Berechtigung erteilen.</string>
     <string name="list_empty">Liste ist leer</string>
     <string name="album_title_bookmarks">Lesezeichen</string>
     <string name="album_title_history">Verlauf</string>
@@ -17,7 +17,7 @@
     <string name="search_hint">Suche</string>
     <string name="create_new">Neu</string>
     <string name="color_red">Rot</string>
-    <string name="color_pink">Pink</string>
+    <string name="color_pink">Rosa</string>
     <string name="color_purple">Lila</string>
     <string name="color_blue">Blau</string>
     <string name="color_teal">Petrol</string>
@@ -207,4 +207,5 @@
     <string name="setting_title_screenOn">Bildschirm nicht ausschalten</string>
     <string name="setting_title_audioBackground">Audio im Hintergrund abspielen</string>
     <!-- License changelog -->
+    <string name="dialog_neverAsk">Verwerfen. Nicht mehr anzeigen.</string>
 </resources>

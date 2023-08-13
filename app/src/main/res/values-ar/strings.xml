@@ -5,7 +5,7 @@
     <string name="app_ok">موافق</string>
     <string name="app_help">مساعدة</string>
     <string name="app_cancel">إلغاء</string>
-    <string name="app_done">تـم</string>
+    <string name="app_done">تم</string>
     <string name="app_error">خطأ</string>
     <string name="app_warning">تحذير</string>
     <string name="app_permission">لاستخدام هذه الميزة، يجب أن تمنح الإذن. بعد ذلك أعد تشغيل التطبيق.</string>
@@ -15,7 +15,6 @@
     <string name="album_title_home">الصفحة الرئيسية</string>
     <string name="album_title_tab">علامات التبويب المفتوحة</string>
     <string name="search_hint">البحث</string>
-    <string name="create_new">New</string>
     <string name="color_red">أحمر</string>
     <string name="color_pink">وردي</string>
     <string name="color_purple">بنفسجي</string>
@@ -50,7 +49,6 @@
     <string name="menu_save_pdf">حفظ كـ PDF</string>
     <string name="menu_shareClipboard">نسخ للحافظة</string>
     <string name="menu_other_searchSite">البحث في الموقع</string>
-    <string name="link_you_copied">Link you copied</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">العنوان:</string>
     <string name="dialog_URL_hint">العنوان:</string>

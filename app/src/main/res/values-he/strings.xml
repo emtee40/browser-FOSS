@@ -50,7 +50,6 @@
     <string name="menu_save_pdf">שמור כ-PDF</string>
     <string name="menu_shareClipboard">העתק ללוח</string>
     <string name="menu_other_searchSite">חפש באתר</string>
-    <string name="link_you_copied">Link you copied</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">כותרת:</string>
     <string name="dialog_URL_hint">כתובת אתר:</string>
@@ -133,7 +132,6 @@
     <string name="setting_title_reload">החלק מטה כדי לטעון מחדש</string>
     <string name="setting_title_searchEngine">מנוע חיפוש מותאם אישית</string>
     <string name="setting_title_userAgent">סוכן משתמש מותאם אישית</string>
-    <string name="setting_title_clipboard_record">Clipboard record</string>
     <string name="setting_title_fingerPrint">הגנה על טביעות אצבע</string>
     <string name="setting_theme">נושא</string>
     <string name="setting_theme_system">מערכת</string>

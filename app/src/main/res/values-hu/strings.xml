@@ -80,7 +80,6 @@
     <string name="setting_summary_search_engine_ecosia">Ecosia</string>
     <string name="setting_summary_search_engine_metager">Metager</string>
     <string name="setting_title_font">Betűméret</string>
-    <string name="setting_title_dom">DOM Storage</string>
     <string name="privacy_redirect">Átirányítás</string>
     <string name="privacy_redirect_twitter">Twitter</string>
     <string name="privacy_redirect_youTube">YouTube</string>
@@ -133,7 +132,6 @@
     <string name="setting_title_reload">Elutasítás lefelé húzással</string>
     <string name="setting_title_searchEngine">Egyedi keresőmotor</string>
     <string name="setting_title_userAgent">Egyedi user agent</string>
-    <string name="setting_title_clipboard_record">Clipboard record</string>
     <string name="setting_title_fingerPrint">Ujjlenyomat-védelem</string>
     <string name="setting_theme">Téma</string>
     <string name="setting_theme_system">Rendszer</string>

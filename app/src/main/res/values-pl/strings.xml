@@ -202,7 +202,6 @@
     <string name="setting_summary_tabsReload">Przeładuj ostatnio otwarte karty, podczas uruchamiania FOSS Browser.</string>
     <string name="setting_summary_tabsRestore">Przywracanie zakładek, gdy FOSS Browser zostanie zabity przez system.</string>
     <string name="hint_DRM_Media">Zezwolić na odtwarzanie mediów chronionych DRM?</string>
-    <string name="menu_reload">Reload</string>
     <string name="menu_restart">Uruchom ponownie i załaduj ponownie karty</string>
     <string name="setting_title_screenOn">Nie wyłączaj ekranu</string>
     <string name="setting_title_audioBackground">Odtwarzanie dźwięku w tle</string>

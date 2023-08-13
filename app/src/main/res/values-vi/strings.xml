@@ -86,7 +86,6 @@
     <string name="privacy_redirect_youTube">YouTube</string>
     <string name="custom_redirects">Tuỳ chỉnh chuyễn hướng</string>
     <string name="source">Source</string>
-    <string name="target">Target</string>
     <string name="setting_title_save_data">Yêu cầu \'Tiết kiệm dữ liệu\'</string>
     <string name="setting_title_profiles">Cấu hình</string>
     <string name="setting_title_profiles_edit">Sửa cấu hình</string>
@@ -133,7 +132,6 @@
     <string name="setting_title_reload">Vuốt xuống để tải lại</string>
     <string name="setting_title_searchEngine">Công cụ tìm kiếm tuỳ chỉnh</string>
     <string name="setting_title_userAgent">Tác nhân người dùng tuỳ chỉnh</string>
-    <string name="setting_title_clipboard_record">Clipboard record</string>
     <string name="setting_title_fingerPrint">Bảo vệ vân tay</string>
     <string name="setting_theme">Chủ đề</string>
     <string name="setting_theme_system">Hệ thống</string>

@@ -20,7 +20,6 @@
     <string name="color_pink">Merah Muda</string>
     <string name="color_purple">Ungu</string>
     <string name="color_blue">Biru</string>
-    <string name="color_teal">Teal</string>
     <string name="color_green">Hijau</string>
     <string name="color_lime">Jeruk Nipis</string>
     <string name="color_yellow">Kuning</string>
@@ -88,7 +87,6 @@
     <string name="source">Sumber</string>
     <string name="target">Sasaran</string>
     <string name="setting_title_save_data">Permintaan \'Simpan Data\'</string>
-    <string name="setting_title_profiles">Profil</string>
     <string name="setting_title_profiles_edit">Edit profil</string>
     <string name="setting_title_profiles_trustedList">Situs web terpercaya</string>
     <string name="setting_title_profiles_standardList">Situs web standar</string>
@@ -98,7 +96,6 @@
     <string name="setting_title_profiles_standard">Standar</string>
     <string name="setting_title_profiles_protected">Terlindungi</string>
     <string name="setting_title_profiles_changed">Kustom</string>
-    <string name="setting_title_profiles_active">Profil</string>
     <string name="setting_title_profiles_dataUsage">Penggunaan data</string>
     <string name="setting_title_profiles_privacy">Privasi</string>
     <string name="setting_title_profiles_Security">Keamanan</string>
@@ -187,7 +184,6 @@
     <string name="dialog_postOnWebsite">Posting di situs web</string>
     <!-- Whitelist -->
     <string name="whitelist_menu_clear">Bersihkan</string>
-    <string name="whitelist_edit_hint">Domain</string>
     <string name="whitelist_add">Tambah</string>
     <string name="menu_desktopView">Tampilan desktop</string>
     <string name="menu_dayView">Tampilan terang</string>

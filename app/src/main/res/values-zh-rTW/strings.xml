@@ -4,20 +4,15 @@
     <string name="app_name">FOSS瀏覽器</string>
     <string name="app_ok">確定</string>
     <string name="app_help">說明</string>
-    <string name="app_cancel">Cancel</string>
     <string name="app_done">完成</string>
     <string name="app_error">错误</string>
     <string name="app_warning">警告（Warning）</string>
     <string name="app_permission">要使用这个功能，你必须授予权限。之后，重新启动应用程序。</string>
     <string name="list_empty">清單是空的</string>
-    <string name="album_title_bookmarks">Bookmarks</string>
-    <string name="album_title_history">History</string>
     <string name="album_title_home">Home</string>
     <string name="album_title_tab">已開啟的分頁</string>
-    <string name="search_hint">Search</string>
     <string name="create_new">新增</string>
     <string name="color_red">Red</string>
-    <string name="color_pink">Pink</string>
     <string name="color_purple">紫</string>
     <string name="color_blue">藍</string>
     <string name="color_teal">藍綠</string>
@@ -30,13 +25,9 @@
     <!-- Menu -->
     <string name="main_menu_new_tab">新增背景分頁</string>
     <string name="main_menu_new_tabProfile">新标签（含个人资料......）。</string>
-    <string name="main_menu_new_tabOpen">New tab (foreground)</string>
-    <string name="main_omnibox_input_hint">Search or type URL</string>
     <string name="menu_open_with">Open link with …</string>
-    <string name="menu_quit">Quit</string>
     <string name="menu_openFav">開啟首頁</string>
     <string name="menu_delete">Delete</string>
-    <string name="menu_edit">Edit</string>
     <string name="menu_closeTab">關閉分頁</string>
     <string name="menu_download">開啟下載資料夾</string>
     <string name="menu_fav">設為首頁</string>

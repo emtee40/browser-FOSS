@@ -106,7 +106,6 @@
     <string name="setting_title_images">Imagens</string>
     <string name="setting_title_cookie">Cookies</string>
     <string name="setting_summary_cookie_delete">Se selecionado, todos os cookies serão apagados. Inclusive os cookies de sites confiáveis.</string>
-    <string name="setting_title_javascript_popUp">Popups</string>
     <string name="setting_title_javascript">JavaScript</string>
     <string name="setting_title_adblock">AdBlock</string>
     <string name="setting_summary_adblock">Habilita o AdBlock para bloquear anúncios irritantes. Sites também carregam mais rápido quando ativado.</string>

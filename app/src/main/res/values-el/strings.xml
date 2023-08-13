@@ -187,7 +187,6 @@
     <string name="dialog_postOnWebsite">Δημοσίευση στον ιστότοπο</string>
     <!-- Whitelist -->
     <string name="whitelist_menu_clear">Εκκαθάριση</string>
-    <string name="whitelist_edit_hint">Domain</string>
     <string name="whitelist_add">Προσθήκη</string>
     <string name="menu_desktopView">Προβολή για υπολογιστή</string>
     <string name="menu_dayView">Προβολή ημέρας</string>
