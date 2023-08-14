@@ -2307,6 +2307,13 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
             case "24":
                 copyLink(ninjaWebView.getUrl());
                 break;
+            case "25":
+                Intent settings = new Intent(BrowserActivity.this, Settings_Activity.class);
+                startActivity(settings);
+                break;
+            case "26":
+                doubleTapsQuit();
+                break;
         }
     }
 

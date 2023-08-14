@@ -8,6 +8,7 @@
 - fix: error warnings #1092 and #1082
 - fix: removed "open link with" from menus, since it does the same like sharing #1089
 - fix: HTTPS or HTTP dialog only asked one time per session #1083
+- fix: Gestures: added gestures for "Open Settings" and "Quit app" #1087
 - updated translations
 
 
