@@ -131,39 +131,6 @@ public class NinjaWebView extends WebView implements AlbumController {
         initAlbum();
     }
 
-    @SuppressWarnings("ResultOfMethodCallIgnored")
-    public static String getErrorHTML(Context context, String description, String failingUrl) {
-        int primary = MaterialColors.getColor(context, R.attr.colorPrimary, Color.GREEN);
-        int background = MaterialColors.getColor(context, android.R.attr.colorBackground, Color.BLACK);
-        String primaryHex = String.format("#%06X", (0xFFFFFF & primary));
-        String backgroundHex = String.format("#%06X", (0xFFFFFF & background));
-        String errorSvgPath = "";
-        try {
-            InputStream inputStream = context.getResources().openRawResource(R.raw.error);
-            byte[] b = new byte[inputStream.available()];
-            inputStream.read(b);
-            errorSvgPath = new String(b);
-        } catch (Exception ignored) {}
-
-        String s = context.getString(R.string.app_error) + ": " +failingUrl;
-        return "<html><body>" +
-                errorSvgPath +
-                "<div align=\"center\">" +
-                description +
-                "<hr style=\"height: 1rem; visibility:hidden;\" />" +
-                s +
-                "\n</div>" +
-                "<a href=\"" + failingUrl + "\">" + context.getString(R.string.menu_reload) + "</a>" +
-                "</body></html>" +
-                "<style>" +
-                "html { background: " + backgroundHex + ";" + "color: " + primaryHex + "; }" +
-                "body { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center }" +
-                "svg { transform: scale(3); margin-bottom: 4rem; fill: " + primaryHex + "; }" +
-                "a { margin-top: 1rem; text-decoration: none; padding: 0.7rem 1rem; border-radius: 1rem; background: " + primaryHex + ";" + "color: " + backgroundHex + "; }" +
-                "p { line-height: 150%; }" +
-                "</style>";
-    }
-
     @Override
     public void onScrollChanged(int l, int t, int old_l, int old_t) {
         super.onScrollChanged(l, t, old_l, old_t);

@@ -85,19 +85,6 @@ public class NinjaWebViewClient extends WebViewClient {
     }
 
     @Override
-    public void onReceivedError(WebView webview, WebResourceRequest request, WebResourceError error) {
-        Context context = webview.getContext();
-        String description = error.getDescription().toString();
-        String failingUrl = request.getUrl().toString();
-        String urlToLoad = sp.getString("urlToLoad", "");
-        String htmlData = NinjaWebView.getErrorHTML(context, description, urlToLoad);
-        if (urlToLoad.equals(failingUrl)) {
-            webview.loadDataWithBaseURL(null, htmlData, "","",failingUrl);
-            webview.invalidate();
-        }
-    }
-
-    @Override
     public void onPageStarted(WebView view, String url, Bitmap favicon) {
 
         ninjaWebView.setStopped(false);
