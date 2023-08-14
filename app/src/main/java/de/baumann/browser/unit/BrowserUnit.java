@@ -214,6 +214,7 @@ public class BrowserUnit {
                 if (domain.contains(customRedirect.getSource())) {
                     ninjaWebView.stopLoading();
                     url = url.replace(customRedirect.getSource(), customRedirect.getTarget());
+                    url = url.replace("www.", "");
                     return url;
                 }
             }
@@ -234,13 +235,6 @@ public class BrowserUnit {
             ninjaWebView.stopLoading();
             String substring = url.substring(url.indexOf("twitter.com") + 12);
             url = sp.getString("sp_twitter_string", "https://nitter.net/") + substring;
-            return url;
-        }
-
-        else if (sp.getBoolean("sp_instagram_switch", false) && (domain.equals("instagram.com"))) {
-            ninjaWebView.stopLoading();
-            String substring = url.substring(url.indexOf("instagram.com") + 14);
-            url = sp.getString("sp_instagram_string", "https://bibliogram.pussthecat.org/") + substring;
             return url;
         }
         return url;
