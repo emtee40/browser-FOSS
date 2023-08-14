@@ -2,7 +2,7 @@ package de.baumann.browser.objects;
 
 public class CustomRedirect {
     public final String source;
-    public String target;
+    public final String target;
 
     public CustomRedirect(String source, String target) {
         this.source = source;
