@@ -2100,7 +2100,11 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
         if (ninjaWebView.canGoBack()) {
             ninjaWebView.initPreferences(historyUrl);
             ninjaWebView.setIsBackPressed(true);
-            ninjaWebView.loadUrl(historyUrl);
+            if (HelperUnit.domain(ninjaWebView.getUrl()).equals(HelperUnit.domain(historyUrl))) {
+                ninjaWebView.goBack();
+            } else {
+                ninjaWebView.loadUrl(historyUrl);
+            }
         }
     }
 
