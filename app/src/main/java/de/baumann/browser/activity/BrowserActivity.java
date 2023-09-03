@@ -1554,6 +1554,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 
                         GridView menuEditFilter = dialogViewFilter.findViewById(R.id.menu_grid);
                         final List<GridItem> menuEditFilterList = new LinkedList<>();
+                        sp.edit().putString("showFilterDialogX", "true").apply();
                         HelperUnit.addFilterItems(activity, menuEditFilterList);
                         GridAdapter menuEditFilterAdapter = new GridAdapter(context, menuEditFilterList);
                         menuEditFilter.setNumColumns(2);
@@ -1575,6 +1576,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
                                 HelperUnit.convertDpToPixel(20f, context),
                                 HelperUnit.convertDpToPixel(10f, context));
                         menuEditFilter.setLayoutParams(params);
+                        dialogFilter.setOnCancelListener(dialogInterface -> sp.edit().putString("showFilterDialogX", "false").apply());
                     });
                     newIcon = recordList.get(location).getIconColor();
                     HelperUnit.setFilterIcons(context, ib_icon, newIcon);
@@ -2005,8 +2007,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
     }
 
     private void showDialogFilter() {
-        sp.edit().putString("showFilterDialogX", "true").apply();
-
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
         View dialogView = View.inflate(context, R.layout.dialog_menu, null);
         builder.setView(dialogView);
@@ -2020,6 +2020,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 
         GridView menu_grid = dialogView.findViewById(R.id.menu_grid);
         final List<GridItem> gridList = new LinkedList<>();
+        sp.edit().putString("showFilterDialogX", "true").apply();
         HelperUnit.addFilterItems(activity, gridList);
 
         GridAdapter gridAdapter = new GridAdapter(context, gridList);
