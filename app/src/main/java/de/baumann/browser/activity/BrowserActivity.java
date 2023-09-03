@@ -2203,7 +2203,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
         });
     }
 
-
     private void searchOnSite() {
         searchOnSite = true;
         omniBox.setVisibility(View.GONE);
@@ -2353,6 +2352,12 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
             getIntent().setAction("");
             hideOverview();
             postLink(url, null);
+            return; }
+        else if ("translate".equals(action)) {
+            getIntent().setAction("");
+            hideOverview();
+            String translate = "https://www.deepl.com/translator?share=generic#ee/ce/" + url;
+            addAlbum("", translate, true, false, "", null);
             return; }
         else if (intent.getAction() != null && intent.getAction().equals(Intent.ACTION_PROCESS_TEXT)) {
             CharSequence text = getIntent().getCharSequenceExtra(Intent.EXTRA_PROCESS_TEXT);

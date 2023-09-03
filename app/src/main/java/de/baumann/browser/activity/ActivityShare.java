@@ -1,12 +1,10 @@
-package de.baumann.browser;
+package de.baumann.browser.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import de.baumann.browser.activity.BrowserActivity;
-
-public class ShareActivity extends Activity {
+public class ActivityShare extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

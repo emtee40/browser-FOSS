@@ -90,8 +90,21 @@
         </activity>
 
         <activity
-            android:name=".ShareActivity"
+            android:name=".activity.ActivityShare"
             android:label="@string/dialog_postOnWebsite"
+            android:theme="@android:style/Theme.NoDisplay"
+            android:exported="true">
+
+            <intent-filter android:icon="@mipmap/ic_launcher">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.ActivityTranslate"
+            android:label="Translate"
             android:theme="@android:style/Theme.NoDisplay"
             android:exported="true">
 
