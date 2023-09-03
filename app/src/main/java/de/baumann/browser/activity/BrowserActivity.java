@@ -471,11 +471,11 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
     @SuppressWarnings("NullableProblems")
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
         if (!orientationChanged) {
             saveOpenedTabs();
             HelperUnit.triggerRebirth(context); }
         else orientationChanged = false;
+        super.onConfigurationChanged(newConfig);
     }
 
     @Override
