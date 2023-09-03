@@ -433,8 +433,9 @@ public class HelperUnit {
                 if (BackupUnit.checkPermissionStorage(activity)) {
                     File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), filename1);
                     try {
-                        FileOutputStream fos = new FileOutputStream(file);
-                        fos.write(imagedata);
+                        try(FileOutputStream fos = new FileOutputStream(file)) {
+                            fos.write(imagedata);
+                        }
                     } catch (Exception e) {
                         System.out.println("Error Downloading File: " + e);
                         e.printStackTrace();

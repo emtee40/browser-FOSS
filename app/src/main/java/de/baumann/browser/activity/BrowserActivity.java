@@ -280,7 +280,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
         };
 
         IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
-        registerReceiver(downloadReceiver, filter);
+        ContextCompat.registerReceiver(context, downloadReceiver, filter, ContextCompat.RECEIVER_NOT_EXPORTED);
 
         initOmniBox();
         initSearchPanel();
@@ -1303,10 +1303,12 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
         ImageView menu_icon = dialogView.findViewById(R.id.menu_icon);
 
         if (type == SRC_ANCHOR_TYPE) {
-            FaviconHelper faviconHelper = new FaviconHelper(context);
-            Bitmap bitmap = faviconHelper.getFavicon(url);
-            if (bitmap != null) menu_icon.setImageBitmap(bitmap);
-            else menu_icon.setImageResource(R.drawable.icon_link); }
+            try(FaviconHelper faviconHelper = new FaviconHelper(context)) {
+                Bitmap bitmap = faviconHelper.getFavicon(url);
+                if (bitmap != null) menu_icon.setImageBitmap(bitmap);
+                else menu_icon.setImageResource(R.drawable.icon_link);
+            }
+        }
         else if (type == IMAGE_TYPE) menu_icon.setImageResource(R.drawable.icon_image);
         else menu_icon.setImageResource(R.drawable.icon_link);
 

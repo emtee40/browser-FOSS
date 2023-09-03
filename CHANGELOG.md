@@ -10,6 +10,7 @@
 - fix: HTTPS or HTTP dialog only asked one time per session #1083
 - fix: Gestures: added gestures for "Open Settings" and "Quit app" #1087
 - fix: Custom Redirects to sites that don't start with "www." #1097
+- fix: lint issues
 - new: translate text from context menu with deepL
 - updated translations
 

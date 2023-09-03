@@ -123,10 +123,10 @@ public class NinjaDownloadListener implements DownloadListener {
                             DataURIParser dataURIParser = new DataURIParser(msgString[0]);
                             if (BackupUnit.checkPermissionStorage(context)) {
                                 File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), filename);
-                                FileOutputStream fos = new FileOutputStream(file);
-                                fos.write(dataURIParser.getImagedata());
+                                try(FileOutputStream fos = new FileOutputStream(file)) {
+                                    fos.write(dataURIParser.getImagedata());
                                 }
-                            else BackupUnit.requestPermission(activity); }
+                            } else BackupUnit.requestPermission(activity); }
                         else {
                             try {
                                 Uri source = Uri.parse(url);

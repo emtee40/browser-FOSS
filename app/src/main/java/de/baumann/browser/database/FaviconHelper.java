@@ -55,11 +55,12 @@ public class FaviconHelper extends SQLiteOpenHelper {
 
     public static void setFavicon(Context context, View view, String url, int id, int idImage) {
         ImageView faviconView = view.findViewById(id);
-        FaviconHelper faviconHelper = new FaviconHelper(context);
-        Bitmap bitmap = faviconHelper.getFavicon(url);
-        if (faviconView != null) {
-            if (bitmap != null) faviconView.setImageBitmap(bitmap);
-            else faviconView.setImageResource(idImage);
+        try(FaviconHelper faviconHelper = new FaviconHelper(context)) {
+            Bitmap bitmap = faviconHelper.getFavicon(url);
+            if (faviconView != null) {
+                if (bitmap != null) faviconView.setImageBitmap(bitmap);
+                else faviconView.setImageResource(idImage);
+            }
         }
     }
 

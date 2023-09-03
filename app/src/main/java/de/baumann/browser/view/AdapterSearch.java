@@ -114,15 +114,14 @@ public class AdapterSearch extends BaseAdapter implements Filterable {
             holder.iconView.setImageResource(R.drawable.icon_paste);
         }
 
-        FaviconHelper faviconHelper = new FaviconHelper(context);
-        Bitmap bitmap = faviconHelper.getFavicon(item.url);
-
-        if (bitmap != null) {
-            holder.favicon.setImageBitmap(bitmap);
-        } else {
-            holder.favicon.setImageResource(R.drawable.icon_image_broken);
+        try(FaviconHelper faviconHelper = new FaviconHelper(context)) {
+            Bitmap bitmap = faviconHelper.getFavicon(item.url);
+            if (bitmap != null) {
+                holder.favicon.setImageBitmap(bitmap);
+            } else {
+                holder.favicon.setImageResource(R.drawable.icon_image_broken);
+            }
         }
-
         return view;
     }
 

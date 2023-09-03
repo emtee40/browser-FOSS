@@ -103,15 +103,14 @@ public class AdapterRecord extends ArrayAdapter<Record> {
             holder.cardView.setCardBackgroundColor(color);
         }
 
-        FaviconHelper faviconHelper = new FaviconHelper(context);
-        Bitmap bitmap = faviconHelper.getFavicon(record.getURL());
-
-        if (bitmap != null) {
-            holder.favicon.setImageBitmap(bitmap);
-        } else {
-            holder.favicon.setImageResource(R.drawable.icon_image_broken);
+        try(FaviconHelper faviconHelper = new FaviconHelper(context)) {
+            Bitmap bitmap = faviconHelper.getFavicon(record.getURL());
+            if (bitmap != null) {
+                holder.favicon.setImageBitmap(bitmap);
+            } else {
+                holder.favicon.setImageResource(R.drawable.icon_image_broken);
+            }
         }
-
         return view;
     }
 }
