@@ -207,4 +207,6 @@
     <string name="setting_title_screenOn">Scherm aanlaten</string>
     <string name="setting_title_audioBackground">Audio op achtergrond afspelen</string>
     <!-- License changelog -->
+    <string name="dialog_translate">Vertaal met DeepL</string>
+    <string name="dialog_neverAsk">Ontslag nemen. Vraag deze sessie nooit.</string>
 </resources>

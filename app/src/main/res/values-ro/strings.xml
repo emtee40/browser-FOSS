@@ -207,4 +207,6 @@
     <string name="setting_title_screenOn">Păstrează ecranul pornit</string>
     <string name="setting_title_audioBackground">Redă sunetul în fundal</string>
     <!-- License changelog -->
+    <string name="dialog_translate">Tradu cu DeepL</string>
+    <string name="dialog_neverAsk">Respingeți. Nu întrebați niciodată în această sesiune.</string>
 </resources>

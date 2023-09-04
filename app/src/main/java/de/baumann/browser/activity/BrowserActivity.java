@@ -2367,9 +2367,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
             wv.getSettings().setJavaScriptEnabled(true);
             wv.loadUrl(translate);
             builder.setView(wv);
-            builder.setTitle(getString(R.string.dialog_translate));
-            builder.setIcon(R.drawable.icon_post);
-            builder.setNegativeButton(R.string.app_cancel, (dialog, whichButton) -> dialog.cancel());
+            builder.setNegativeButton(R.string.app_ok, (dialog, whichButton) -> dialog.cancel());
             Dialog dialog = builder.create();
             dialog.show();
             HelperUnit.setupDialog(context, dialog);

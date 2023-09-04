@@ -207,4 +207,6 @@
     <string name="setting_title_screenOn">保持屏幕开启</string>
     <string name="setting_title_audioBackground">在后台播放音频</string>
     <!-- License changelog -->
+    <string name="dialog_translate">使用 DeepL 进行翻译</string>
+    <string name="dialog_neverAsk">解散。永远不要问这个问题。</string>
 </resources>

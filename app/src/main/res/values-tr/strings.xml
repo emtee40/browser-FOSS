@@ -207,4 +207,6 @@
     <string name="setting_title_screenOn">Ekranı açık tut</string>
     <string name="setting_title_audioBackground">Sesi arka planda oynat</string>
     <!-- License changelog -->
+    <string name="dialog_translate">DeepL ile çevirin</string>
+    <string name="dialog_neverAsk">Dağılın. Bu oturumda asla sormayın.</string>
 </resources>

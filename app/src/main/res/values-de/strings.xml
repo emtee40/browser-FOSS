@@ -106,7 +106,7 @@
     <string name="setting_title_images">Bilder</string>
     <string name="setting_title_cookie">Cookies</string>
     <string name="setting_summary_cookie_delete">Falls aktiviert, werden alle Cookies gelöscht. Auch die von vertrauenswürdigen Websites.</string>
-    <string name="setting_title_javascript_popUp">Popups</string>
+    <string name="setting_title_javascript_popUp">Pop-Ups</string>
     <string name="setting_title_javascript">JavaScript</string>
     <string name="setting_title_adblock">AdBlock</string>
     <string name="setting_summary_adblock">Aktiviere AdBlock, um lästige Werbung zu blockieren. Websites laden auch schneller, falls eingeschaltet.</string>
@@ -186,7 +186,7 @@
     <string name="dialog_postOnWebsiteHint">Zu öffnende URL. Wird für die nächste Verwendung gespeichert.</string>
     <string name="dialog_postOnWebsite">Auf Webseite posten</string>
     <!-- Whitelist -->
-    <string name="whitelist_menu_clear">Löschen</string>
+    <string name="whitelist_menu_clear">Leeren</string>
     <string name="whitelist_edit_hint">Domain</string>
     <string name="whitelist_add">Hinzufügen</string>
     <string name="menu_desktopView">Desktop-Ansicht</string>
@@ -208,4 +208,5 @@
     <string name="setting_title_audioBackground">Audio im Hintergrund abspielen</string>
     <!-- License changelog -->
     <string name="dialog_neverAsk">Verwerfen. Nicht mehr anzeigen.</string>
+    <string name="dialog_translate">Übersetze mit DeepL</string>
 </resources>

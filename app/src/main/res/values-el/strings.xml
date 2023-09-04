@@ -206,4 +206,7 @@
     <string name="setting_title_screenOn">Κρατήστε την οθόνη ανοιχτή</string>
     <string name="setting_title_audioBackground">Αναπαραγωγή ήχου στο φόντο</string>
     <!-- License changelog -->
+    <string name="whitelist_edit_hint">Τομέας</string>
+    <string name="dialog_translate">Μεταφράστε με το DeepL</string>
+    <string name="dialog_neverAsk">Απομακρυνθείτε. Ποτέ μην ρωτάτε αυτή τη συνεδρία.</string>
 </resources>

@@ -205,4 +205,8 @@
     <string name="setting_title_screenOn">إبقاء الشاشة مشتغلة</string>
     <string name="setting_title_audioBackground">شغل الصوت في الخلفية</string>
     <!-- License changelog -->
+    <string name="dialog_neverAsk">رفض. لا تسأل هذه الجلسة أبدًا.</string>
+    <string name="link_you_copied">الرابط الذي نسخته</string>
+    <string name="dialog_translate">ترجمة مع DeepL</string>
+    <string name="create_new">جديد</string>
 </resources>

@@ -203,4 +203,10 @@
     <string name="setting_title_screenOn">Biarkan layar tetap menyala</string>
     <string name="setting_title_audioBackground">Putar suara di latar belakang</string>
     <!-- License changelog -->
+    <string name="color_teal">pirus</string>
+    <string name="setting_title_profiles">profil</string>
+    <string name="whitelist_edit_hint">ranah (domain)</string>
+    <string name="dialog_translate">Terjemahkan dengan DeepL</string>
+    <string name="dialog_neverAsk">Bubar. Jangan pernah menanyakan sesi ini.</string>
+    <string name="setting_title_profiles_active">profil</string>
 </resources>

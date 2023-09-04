@@ -207,4 +207,6 @@
     <string name="setting_title_screenOn">画面を消灯しない</string>
     <string name="setting_title_audioBackground">バックグラウンドで音声を再生</string>
     <!-- License changelog -->
+    <string name="dialog_translate">DeepLで翻訳</string>
+    <string name="dialog_neverAsk">解散する。このセッションには決して質問しないでください。</string>
 </resources>

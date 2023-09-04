@@ -207,4 +207,6 @@
     <string name="setting_title_screenOn">Nechat obrazovku zapnutou</string>
     <string name="setting_title_audioBackground">Přehrát zvuk na pozadí</string>
     <!-- License changelog -->
+    <string name="dialog_translate">Přeložte pomocí DeepL</string>
+    <string name="dialog_neverAsk">Zavrhnout. Nikdy se na tuto relaci neptejte.</string>
 </resources>

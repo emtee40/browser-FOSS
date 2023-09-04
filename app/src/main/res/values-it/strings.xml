@@ -207,4 +207,6 @@
     <string name="setting_title_screenOn">Mantieni il display acceso</string>
     <string name="setting_title_audioBackground">Riproduci audio in sottofondo</string>
     <!-- License changelog -->
+    <string name="dialog_translate">Tradurre con DeepL</string>
+    <string name="dialog_neverAsk">Rifiutare. Non chiedere mai questa sessione.</string>
 </resources>

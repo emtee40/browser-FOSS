@@ -206,4 +206,7 @@
     <string name="setting_title_screenOn">Држите екран укључен</string>
     <string name="setting_title_audioBackground">Пустите аудио у позадини</string>
     <!-- License changelog -->
+    <string name="dialog_neverAsk">Одбаци. Никада не питајте ову сесију.</string>
+    <string name="setting_title_clipboard_record">запис у међуспремнику</string>
+    <string name="dialog_translate">Преводи са ДеепЛ</string>
 </resources>

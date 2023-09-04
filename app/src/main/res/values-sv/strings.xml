@@ -207,4 +207,6 @@
     <string name="setting_title_screenOn">Behåll skärmen på</string>
     <string name="setting_title_audioBackground">Spela ljud i bakgrunden</string>
     <!-- License changelog -->
+    <string name="dialog_translate">Översätt med DeepL</string>
+    <string name="dialog_neverAsk">Avfärda. Fråga aldrig under denna session.</string>
 </resources>

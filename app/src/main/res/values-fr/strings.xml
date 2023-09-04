@@ -207,4 +207,6 @@
     <string name="setting_title_screenOn">Garder l\'écran allumé</string>
     <string name="setting_title_audioBackground">Jouer l\'audio en arrière-plan</string>
     <!-- License changelog -->
+    <string name="dialog_neverAsk">Ignorer. Ne plus afficher durant cette session.</string>
+    <string name="dialog_translate">Traduire avec DeepL</string>
 </resources>

@@ -206,4 +206,7 @@
     <string name="setting_title_screenOn">Mantener pantalla encendida</string>
     <string name="setting_title_audioBackground">Reproducir audio en segundo plano</string>
     <!-- License changelog -->
+    <string name="setting_title_javascript_popUp">pop-ups</string>
+    <string name="dialog_neverAsk">Retírese. Nunca preguntes en esta sesión.</string>
+    <string name="dialog_translate">Traduzca con DeepL</string>
 </resources>

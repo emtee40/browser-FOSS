@@ -205,4 +205,8 @@
     <string name="setting_title_screenOn">השאר מסך דלוק</string>
     <string name="setting_title_audioBackground">השמעת אודיו ברקע</string>
     <!-- License changelog -->
+    <string name="setting_title_clipboard_record">שיא הלוח</string>
+    <string name="link_you_copied">קישור שהעתקת</string>
+    <string name="dialog_translate">תרגם עם DeepL</string>
+    <string name="dialog_neverAsk">לשחרר. לעולם אל תשאל את הפגישה הזו.</string>
 </resources>

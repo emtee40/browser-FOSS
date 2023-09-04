@@ -205,4 +205,8 @@
     <string name="setting_title_screenOn">Giữ màn hình bật</string>
     <string name="setting_title_audioBackground">Phát âm thanh trong nền</string>
     <!-- License changelog -->
+    <string name="setting_title_clipboard_record">Bản ghi bảng nhớ tạm</string>
+    <string name="dialog_translate">Dịch bằng DeepL</string>
+    <string name="dialog_neverAsk">Miễn nhiệm. Đừng bao giờ hỏi phiên này.</string>
+    <string name="target">mục tiêu</string>
 </resources>

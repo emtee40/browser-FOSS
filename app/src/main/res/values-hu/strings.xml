@@ -205,4 +205,8 @@
     <string name="setting_title_screenOn">Kijelző ébrentartása</string>
     <string name="setting_title_audioBackground">Hang lejátszása a háttérben</string>
     <!-- License changelog -->
+    <string name="setting_title_dom">dom tárolás</string>
+    <string name="setting_title_clipboard_record">Vágólap rekord</string>
+    <string name="dialog_translate">Fordítás a DeepL segítségével</string>
+    <string name="dialog_neverAsk">Elvetés. Soha ne kérdezd ezt az ülést.</string>
 </resources>

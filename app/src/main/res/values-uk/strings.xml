@@ -207,4 +207,6 @@
     <string name="setting_title_screenOn">Не вимикати екран</string>
     <string name="setting_title_audioBackground">Відтворювати аудіо у фоновому режимі</string>
     <!-- License changelog -->
+    <string name="dialog_translate">Перекладайте з DeepL</string>
+    <string name="dialog_neverAsk">Відпустіть. Ніколи не питайте про цей сеанс.</string>
 </resources>

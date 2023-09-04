@@ -208,4 +208,6 @@
     <string name="setting_title_screenOn">روشن نگه داشتن صفحه نمایش</string>
     <string name="setting_title_audioBackground">پخش صدا در پس زمینه</string>
     <!-- License changelog -->
+    <string name="dialog_translate">با DeepL ترجمه کنید</string>
+    <string name="dialog_neverAsk">رد. هرگز این جلسه را نپرسید.</string>
 </resources>

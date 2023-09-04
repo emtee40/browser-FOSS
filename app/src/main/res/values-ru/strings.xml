@@ -207,4 +207,6 @@
     <string name="setting_title_screenOn">Не отключать экран</string>
     <string name="setting_title_audioBackground">Воспроизведение аудио в фоне</string>
     <!-- License changelog -->
+    <string name="dialog_translate">Перевести с помощью DeepL</string>
+    <string name="dialog_neverAsk">Отказаться. Никогда не спрашивайте на этой сессии.</string>
 </resources>
