@@ -2360,7 +2360,10 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
         else if ("translate".equals(action)) {
             getIntent().setAction("");
             hideOverview();
-            String translate = "https://www.deepl.com/translator?share=generic#ee/ce/" + url;
+            assert url != null;
+            String text = url.replace("#", "%23");
+            String text2 = text.replace("/","\\%2F");
+            String translate = "https://www.deepl.com/translator?share=generic#ee/ce/" + text2;
             MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
             WebView wv = new NinjaWebView(this);
             CookieManager.getInstance().setAcceptCookie(true);
