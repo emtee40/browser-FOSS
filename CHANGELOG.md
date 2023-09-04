@@ -1,3 +1,7 @@
+### v 10.2 "" (WIP)
+- fix: translation
+
+
 ### v 10.0 "Clara Zetkin"
 - moved repo from Github zu Codeberg
 - moved from crowdin to weblate
