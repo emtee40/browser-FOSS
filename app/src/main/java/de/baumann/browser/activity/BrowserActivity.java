@@ -51,6 +51,7 @@ import android.view.Window;
 import android.view.WindowInsets;
 import android.view.WindowInsetsController;
 import android.view.WindowManager;
+import android.webkit.CookieManager;
 import android.webkit.ValueCallback;
 import android.webkit.WebBackForwardList;
 import android.webkit.WebChromeClient;
@@ -2337,6 +2338,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
             HelperUnit.setupDialog(context, dialog); }
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     private void dispatchIntent(Intent intent) {
 
         String action = intent.getAction();
@@ -2359,7 +2361,18 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
             getIntent().setAction("");
             hideOverview();
             String translate = "https://www.deepl.com/translator?share=generic#ee/ce/" + url;
-            addAlbum("", translate, true, false, "", null);
+            MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
+            WebView wv = new NinjaWebView(this);
+            CookieManager.getInstance().setAcceptCookie(true);
+            wv.getSettings().setJavaScriptEnabled(true);
+            wv.loadUrl(translate);
+            builder.setView(wv);
+            builder.setTitle(getString(R.string.dialog_translate));
+            builder.setIcon(R.drawable.icon_post);
+            builder.setNegativeButton(R.string.app_cancel, (dialog, whichButton) -> dialog.cancel());
+            Dialog dialog = builder.create();
+            dialog.show();
+            HelperUnit.setupDialog(context, dialog);
             return; }
         else if (intent.getAction() != null && intent.getAction().equals(Intent.ACTION_PROCESS_TEXT)) {
             CharSequence text = getIntent().getCharSequenceExtra(Intent.EXTRA_PROCESS_TEXT);

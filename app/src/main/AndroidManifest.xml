@@ -104,7 +104,7 @@
 
         <activity
             android:name=".activity.ActivityTranslate"
-            android:label="Translate"
+            android:label="@string/dialog_translate"
             android:theme="@android:style/Theme.NoDisplay"
             android:exported="true">
 

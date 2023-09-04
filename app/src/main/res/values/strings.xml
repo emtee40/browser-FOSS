@@ -229,7 +229,7 @@
     <string name="toast_backup">Backup data? This will overwrite the old backup.</string>
     <string name="dialog_postOnWebsiteHint">URL to open. Will be saved for next use.</string>
     <string name="dialog_postOnWebsite">Post on website</string>
-    <string name="dialog_translate">Translate</string>
+    <string name="dialog_translate">Translate with DeepL</string>
 
 
     <!-- Whitelist -->
