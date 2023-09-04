@@ -1,4 +1,4 @@
-### v 10.0 "Clara Zetkin" (WIP)
+### v 10.0 "Clara Zetkin"
 - moved repo from Github zu Codeberg
 - moved from crowdin to weblate
 - fix: cookie/profile settings lost on tab change #1095
