@@ -1,5 +1,6 @@
 ### v 10.2 "" (WIP)
 - fix: translation
+- fix: Writing to clipboard from JavaScript doesn't work #853
 
 
 ### v 10.0 "Clara Zetkin"

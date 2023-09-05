@@ -9,6 +9,7 @@
     <string name="app_cancel">Cancel</string>
     <string name="app_done">Done</string>
     <string name="app_error">Error</string>
+    <string name="app_error_copy">Please select and copy text manually</string>
     <string name="app_warning">Warning</string>
     <string name="app_permission">To use this feature you must grant permission. After that restart the app.</string>
     <string name="list_empty">List is empty</string>
