@@ -44,7 +44,6 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.ContextMenu;
 import android.view.KeyEvent;
-import android.view.OrientationEventListener;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -160,7 +159,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
     private BottomNavigationView bottom_navigation;
     private BottomAppBar bottomAppBar;
     private String overViewTab;
-    private BroadcastReceiver downloadReceiver;
     private Activity activity;
     private Context context;
     private SharedPreferences sp;
@@ -171,7 +169,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
     private long newIcon;
     private long filterBy;
     private boolean filter;
-    private boolean orientationChanged;
     private boolean searchOnSite;
     private ValueCallback<Uri[]> filePathCallback = null;
     private AlbumController currentAlbumController = null;
@@ -212,6 +209,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 
     // Overrides
 
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -226,18 +224,9 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         window.setStatusBarColor(ContextCompat.getColor(this, R.color.md_theme_light_onBackground));
-
         if (sp.getBoolean("sp_screenOn", false)) getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         HelperUnit.initTheme(activity);
-
-        OrientationEventListener mOrientationListener = new OrientationEventListener(getApplicationContext()) {
-            @Override
-            public void onOrientationChanged(int orientation) {
-                orientationChanged = true;
-            }
-        };
-        if (mOrientationListener.canDetectOrientation()) mOrientationListener.enable();
 
         sp.edit()
                 .putInt("restart_changed", 0)
@@ -265,9 +254,9 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
             int actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data, getResources().getDisplayMetrics());
             contentFrame.setPadding(0, 0, 0, actionBarHeight); }
 
-        downloadReceiver = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
+        BroadcastReceiver onComplete = new BroadcastReceiver() {
+            public void onReceive(Context ctxt, Intent intent) {
+                // your code
                 MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
                 builder.setTitle(R.string.menu_download);
                 builder.setIcon(R.drawable.icon_download);
@@ -280,8 +269,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
             }
         };
 
-        IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
-        ContextCompat.registerReceiver(context, downloadReceiver, filter, ContextCompat.RECEIVER_NOT_EXPORTED);
+        registerReceiver(onComplete, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
 
         initOmniBox();
         initSearchPanel();
@@ -343,6 +331,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
     @Override
     public void onResume() {
         super.onResume();
+        saveOpenedTabs();
 
         if (sp.getBoolean("sp_camera", false)) {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
@@ -367,6 +356,8 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
     @Override
     public void onDestroy() {
 
+        saveOpenedTabs();
+
         NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.cancel(2);
         notificationManager.cancel(1);
@@ -389,8 +380,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
         if (!sp.getBoolean("sp_reloadTabs", false) || sp.getInt("restart_changed", 1) == 1) {
             sp.edit().putString("openTabs", "").apply();   //clear open tabs in preferences
             sp.edit().putString("openTabsProfile", "").apply(); }
-
-        unregisterReceiver(downloadReceiver);
         super.onDestroy();
     }
 
@@ -467,16 +456,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
                 }
             });
         }
-    }
-
-    @SuppressWarnings("NullableProblems")
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        if (!orientationChanged) {
-            saveOpenedTabs();
-            HelperUnit.triggerRebirth(context); }
-        else orientationChanged = false;
-        super.onConfigurationChanged(newConfig);
     }
 
     @Override
