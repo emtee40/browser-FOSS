@@ -2375,6 +2375,8 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
             assert url != null;
             String text = url.replace("#", "%23");
             String text2 = text.replace("/","\\%2F");
+            String toast = context.getString(R.string.dialog_translate) + ". " + context.getString(R.string.dialog_translate_hint);
+            NinjaToast.show(context, toast);
             String translate = "https://www.deepl.com/translator?share=generic#ee/ce/" + text2;
             MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
             WebView wv = new NinjaWebView(this);

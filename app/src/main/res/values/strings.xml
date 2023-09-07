@@ -231,6 +231,7 @@
     <string name="dialog_postOnWebsiteHint">URL to open. Will be saved for next use.</string>
     <string name="dialog_postOnWebsite">Post on website</string>
     <string name="dialog_translate">Translate with DeepL</string>
+    <string name="dialog_translate_hint">Please enable javascript and cookies vor \"deepl.com\".</string>
 
 
     <!-- Whitelist -->
