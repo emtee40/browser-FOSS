@@ -1,6 +1,8 @@
 ### v 10.2 "" (WIP)
 - fix: translation
 - fix: Writing to clipboard from JavaScript doesn't work #853
+- fix: recreation of activity on ui-mode change
+- new: translate text from context menu with deepL
 
 
 ### v 10.0 "Clara Zetkin"

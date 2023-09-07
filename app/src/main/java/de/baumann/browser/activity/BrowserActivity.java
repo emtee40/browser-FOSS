@@ -209,6 +209,26 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 
     // Overrides
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save opened tabs
+        ArrayList<String> openTabs = new ArrayList<>();
+        for (int i = 0; i < BrowserContainer.size(); i++) {
+            if (currentAlbumController == BrowserContainer.get(i))
+                openTabs.add(0, ((NinjaWebView) (BrowserContainer.get(i))).getUrl());
+            else openTabs.add(((NinjaWebView) (BrowserContainer.get(i))).getUrl()); }
+        savedInstanceState.putString("TABS", TextUtils.join("‚‗‚", openTabs));
+        //Save profiles
+        ArrayList<String> openTabsProfile = new ArrayList<>();
+        for (int i = 0; i < BrowserContainer.size(); i++) {
+            if (currentAlbumController == BrowserContainer.get(i))
+                openTabsProfile.add(0, ((NinjaWebView) (BrowserContainer.get(i))).getProfile());
+            else openTabsProfile.add(((NinjaWebView) (BrowserContainer.get(i))).getProfile()); }
+        savedInstanceState.putString("PROFILE", TextUtils.join("‚‗‚", openTabsProfile));
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
     @SuppressLint("UnspecifiedRegisterReceiverFlag")
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -276,6 +296,19 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
         initOverview();
 
         dispatchIntent(getIntent());
+
+        // Check whether we're recreating a previously destroyed instance
+        if (savedInstanceState != null) {
+            ArrayList<String> openTabs;
+            ArrayList<String> openTabsProfile;
+            openTabs = new ArrayList<>(Arrays.asList(TextUtils.split(savedInstanceState.getString("TABS"), "‚‗‚")));
+            openTabsProfile = new ArrayList<>(Arrays.asList(TextUtils.split(savedInstanceState.getString("PROFILE"), "‚‗‚")));
+            if (openTabs.size() > 0) {
+                for (int counter = 0; counter < openTabs.size(); counter++) {
+                    addAlbum(getString(R.string.app_name), openTabs.get(counter), BrowserContainer.size() < 1, false, openTabsProfile.get(counter), null);
+                }
+            }
+        }
 
         //restore open Tabs from shared preferences if app got killed
         if (sp.getBoolean("sp_restoreTabs", false)
