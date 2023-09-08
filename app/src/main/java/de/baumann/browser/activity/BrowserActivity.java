@@ -23,7 +23,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.content.res.ColorStateList;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -1819,10 +1818,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
             });
 
             Chip chip_cookie = dialogView.findViewById(R.id.chip_cookie);
-            chip_cookie.setChecked(ninjaWebView.getBoolean("_cookies"));
-            if (ninjaWebView.getBoolean("_cookiesThirdParty")) {
-                chip_cookie.setChipIconTint(ColorStateList.valueOf(colorAlert));
-            }
+            chip_cookie.setChecked(ninjaWebView.getBoolean("_cookies") || ninjaWebView.getBoolean("_cookiesThirdParty"));
             chip_cookie.setOnLongClickListener(view -> {
                 Toast.makeText(context, getString(R.string.setting_title_cookie), Toast.LENGTH_SHORT).show();
                 return true;
@@ -1834,9 +1830,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
                 builder2.setView(dialogView2);
                 builder2.setTitle(getString(R.string.setting_title_cookie));
                 builder2.setIcon(R.drawable.icon_cookie);
-                builder2.setNegativeButton(R.string.app_ok, (dialog2, whichButton) -> {
-                    dialog2.cancel();
-                });
+                builder2.setNegativeButton(R.string.app_ok, (dialog2, whichButton) -> dialog2.cancel());
                 AlertDialog dialog2 = builder2.create();
 
                 CheckBox checkbox_cookie = dialogView2.findViewById(R.id.checkbox_cookie);
@@ -1853,16 +1847,9 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
                     ninjaWebView.putProfileBoolean("_cookiesThirdParty", dialog_titleProfile, chip_profile_trusted, chip_profile_standard, chip_profile_protected, chip_profile_changed);
                 });
 
-
                 dialog2.show();
                 HelperUnit.setupDialog(context, dialog2);
-                dialog2.setOnCancelListener(dialog1 -> {
-                    dialog.cancel();
-                    showDialogFastToggle();
-                });
-
-                //ninjaWebView.setProfileChanged();
-                //ninjaWebView.putProfileBoolean("_cookies", dialog_titleProfile, chip_profile_trusted, chip_profile_standard, chip_profile_protected, chip_profile_changed);
+                dialog2.setOnCancelListener(dialog1 -> chip_cookie.setChecked(ninjaWebView.getBoolean("_cookies") || ninjaWebView.getBoolean("_cookiesThirdParty")));
             });
 
             Chip chip_fingerprint = dialogView.findViewById(R.id.chip_Fingerprint);
