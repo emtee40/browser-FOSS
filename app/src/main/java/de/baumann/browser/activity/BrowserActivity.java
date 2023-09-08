@@ -23,6 +23,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.ColorStateList;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -58,6 +59,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebStorage;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.GridView;
@@ -132,6 +134,8 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
     private RelativeLayout omniBox;
     private ImageButton omniBox_overview;
     private int duration;
+    private int colorAlert;
+    private int colorAccent;
 
     // Views
     private TextInputEditText omniBox_text;
@@ -238,6 +242,13 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
         context = BrowserActivity.this;
         sp = PreferenceManager.getDefaultSharedPreferences(context);
         duration = getResources().getInteger(android.R.integer.config_mediumAnimTime);
+
+        TypedValue typedValue = new TypedValue();
+        Resources.Theme theme = context.getTheme();
+        theme.resolveAttribute(R.attr.colorAccent, typedValue, true);
+        colorAccent = typedValue.data;
+        theme.resolveAttribute(R.attr.colorError, typedValue, true);
+        colorAlert = typedValue.data;
 
         if (getSupportActionBar() != null) getSupportActionBar().hide();
         Window window = this.getWindow();
@@ -776,13 +787,8 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
             return true;
         });
 
-        TypedValue typedValue = new TypedValue();
-        Resources.Theme theme = context.getTheme();
-        theme.resolveAttribute(R.attr.colorAccent, typedValue, true);
-        int colorSecondary = typedValue.data;
-
         badgeTab = bottom_navigation.getOrCreateBadge(R.id.page_0);
-        badgeTab.setBackgroundColor(colorSecondary);
+        badgeTab.setBackgroundColor(colorAccent);
         badgeTab.setHorizontalOffset(10);
         badgeTab.setVerticalOffset(10);
         setSelectedTab();
@@ -818,14 +824,8 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
             progressBar.setVisibility(View.GONE);
         });
         bottomAppBar = findViewById(R.id.bottomAppBar);
-
-        TypedValue typedValue = new TypedValue();
-        Resources.Theme theme = context.getTheme();
-        theme.resolveAttribute(R.attr.colorAccent, typedValue, true);
-        int colorSecondary = typedValue.data;
-
         badgeDrawable = BadgeDrawable.create(context);
-        badgeDrawable.setBackgroundColor(colorSecondary);
+        badgeDrawable.setBackgroundColor(colorAccent);
 
         Button omnibox_overflow = findViewById(R.id.omnibox_overflow);
         omnibox_overflow.setOnClickListener(v -> showOverflow());
@@ -1820,13 +1820,49 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 
             Chip chip_cookie = dialogView.findViewById(R.id.chip_cookie);
             chip_cookie.setChecked(ninjaWebView.getBoolean("_cookies"));
+            if (ninjaWebView.getBoolean("_cookiesThirdParty")) {
+                chip_cookie.setChipIconTint(ColorStateList.valueOf(colorAlert));
+            }
             chip_cookie.setOnLongClickListener(view -> {
                 Toast.makeText(context, getString(R.string.setting_title_cookie), Toast.LENGTH_SHORT).show();
                 return true;
             });
             chip_cookie.setOnClickListener(v -> {
-                ninjaWebView.setProfileChanged();
-                ninjaWebView.putProfileBoolean("_cookies", dialog_titleProfile, chip_profile_trusted, chip_profile_standard, chip_profile_protected, chip_profile_changed);
+
+                MaterialAlertDialogBuilder builder2 = new MaterialAlertDialogBuilder(context);
+                View dialogView2 = View.inflate(context, R.layout.dialog_cookies, null);
+                builder2.setView(dialogView2);
+                builder2.setTitle(getString(R.string.setting_title_cookie));
+                builder2.setIcon(R.drawable.icon_cookie);
+                builder2.setNegativeButton(R.string.app_ok, (dialog2, whichButton) -> {
+                    dialog2.cancel();
+                });
+                AlertDialog dialog2 = builder2.create();
+
+                CheckBox checkbox_cookie = dialogView2.findViewById(R.id.checkbox_cookie);
+                checkbox_cookie.setChecked(ninjaWebView.getBoolean("_cookies"));
+                checkbox_cookie.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                    ninjaWebView.setProfileChanged();
+                    ninjaWebView.putProfileBoolean("_cookies", dialog_titleProfile, chip_profile_trusted, chip_profile_standard, chip_profile_protected, chip_profile_changed);
+                });
+
+                CheckBox checkbox_cookieThirdParty = dialogView2.findViewById(R.id.checkbox_cookieThirdParty);
+                checkbox_cookieThirdParty.setChecked(ninjaWebView.getBoolean("_cookiesThirdParty"));
+                checkbox_cookieThirdParty.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                    ninjaWebView.setProfileChanged();
+                    ninjaWebView.putProfileBoolean("_cookiesThirdParty", dialog_titleProfile, chip_profile_trusted, chip_profile_standard, chip_profile_protected, chip_profile_changed);
+                });
+
+
+                dialog2.show();
+                HelperUnit.setupDialog(context, dialog2);
+                dialog2.setOnCancelListener(dialog1 -> {
+                    dialog.cancel();
+                    showDialogFastToggle();
+                });
+
+                //ninjaWebView.setProfileChanged();
+                //ninjaWebView.putProfileBoolean("_cookies", dialog_titleProfile, chip_profile_trusted, chip_profile_standard, chip_profile_protected, chip_profile_changed);
             });
 
             Chip chip_fingerprint = dialogView.findViewById(R.id.chip_Fingerprint);
@@ -1918,13 +1954,9 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
             });
 
             if (listTrusted.isWhite(url) || listStandard.isWhite(url) || listProtected.isWhite(url)) {
-                TypedValue typedValue = new TypedValue();
-                Resources.Theme theme = context.getTheme();
-                theme.resolveAttribute(R.attr.colorError, typedValue, true);
-                int color = typedValue.data;
                 MaterialCardView cardView = dialogView.findViewById(R.id.editProfile);
                 cardView.setVisibility(View.GONE);
-                dialog_warning.setTextColor(color);
+                dialog_warning.setTextColor(colorAlert);
             }
 
             Chip chip_toggleNightView = dialogView.findViewById(R.id.chip_toggleNightView);
@@ -2375,8 +2407,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
             assert url != null;
             String text = url.replace("#", "%23");
             String text2 = text.replace("/","\\%2F");
-            String toast = context.getString(R.string.dialog_translate) + ". " + context.getString(R.string.dialog_translate_hint);
-            NinjaToast.show(context, toast);
+            NinjaToast.show(context, context.getString(R.string.dialog_translate_hint));
             String translate = "https://www.deepl.com/translator?share=generic#ee/ce/" + text2;
             MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
             WebView wv = new NinjaWebView(this);

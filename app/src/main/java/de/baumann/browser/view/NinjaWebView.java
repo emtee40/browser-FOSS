@@ -227,6 +227,10 @@ public class NinjaWebView extends WebView implements AlbumController {
             manager.setAcceptCookie(true);
             manager.getCookie(url);
         } else manager.setAcceptCookie(false);
+        if (sp.getBoolean(profile + "_cookiesThirdParty", false)) {
+            manager.setAcceptThirdPartyCookies(this, true);
+            manager.getCookie(url);
+        } else manager.setAcceptThirdPartyCookies(this, true);
 
         profile = profileOriginal;
     }
@@ -275,6 +279,7 @@ public class NinjaWebView extends WebView implements AlbumController {
                 .putBoolean("profileTrusted_location", false)
                 .putBoolean("profileTrusted_fingerPrintProtection", false)
                 .putBoolean("profileTrusted_cookies", true)
+                .putBoolean("profileTrusted_cookiesThirdParty", true)
                 .putBoolean("profileTrusted_javascript", true)
                 .putBoolean("profileTrusted_javascriptPopUp", true)
                 .putBoolean("profileTrusted_saveHistory", true)
@@ -288,6 +293,7 @@ public class NinjaWebView extends WebView implements AlbumController {
                 .putBoolean("profileStandard_location", false)
                 .putBoolean("profileStandard_fingerPrintProtection", true)
                 .putBoolean("profileStandard_cookies", false)
+                .putBoolean("profileStandard_cookiesThirdParty", false)
                 .putBoolean("profileStandard_javascript", true)
                 .putBoolean("profileStandard_javascriptPopUp", false)
                 .putBoolean("profileStandard_saveHistory", true)
@@ -301,6 +307,7 @@ public class NinjaWebView extends WebView implements AlbumController {
                 .putBoolean("profileProtected_location", false)
                 .putBoolean("profileProtected_fingerPrintProtection", true)
                 .putBoolean("profileProtected_cookies", false)
+                .putBoolean("profileProtected_cookiesThirdParty", false)
                 .putBoolean("profileProtected_javascript", false)
                 .putBoolean("profileProtected_javascriptPopUp", false)
                 .putBoolean("profileProtected_saveHistory", true)
@@ -316,6 +323,7 @@ public class NinjaWebView extends WebView implements AlbumController {
                 .putBoolean("profileChanged_location", sp.getBoolean(profile + "_location", false))
                 .putBoolean("profileChanged_fingerPrintProtection", sp.getBoolean(profile + "_fingerPrintProtection", true))
                 .putBoolean("profileChanged_cookies", sp.getBoolean(profile + "_cookies", false))
+                .putBoolean("profileChanged_cookiesThirdParty", sp.getBoolean(profile + "_cookiesThirdParty", false))
                 .putBoolean("profileChanged_javascript", sp.getBoolean(profile + "_javascript", true))
                 .putBoolean("profileChanged_javascriptPopUp", sp.getBoolean(profile + "_javascriptPopUp", false))
                 .putBoolean("profileChanged_saveHistory", sp.getBoolean(profile + "_saveHistory", true))
@@ -339,6 +347,9 @@ public class NinjaWebView extends WebView implements AlbumController {
                 break;
             case "_cookies":
                 sp.edit().putBoolean("profileChanged_cookies", !sp.getBoolean("profileChanged_cookies", false)).apply();
+                break;
+            case "_cookiesThirdParty":
+                sp.edit().putBoolean("profileChanged_cookiesThirdParty", !sp.getBoolean("profileChanged_cookiesThirdParty", false)).apply();
                 break;
             case "_fingerPrintProtection":
                 sp.edit().putBoolean("profileChanged_fingerPrintProtection", !sp.getBoolean("profileChanged_fingerPrintProtection", true)).apply();
@@ -411,6 +422,8 @@ public class NinjaWebView extends WebView implements AlbumController {
                 return sp.getBoolean(profile + "_javascriptPopUp", false);
             case "_cookies":
                 return sp.getBoolean(profile + "_cookies", false);
+            case "_cookiesThirdParty":
+                return sp.getBoolean(profile + "_cookiesThirdParty", false);
             case "_fingerPrintProtection":
                 return sp.getBoolean(profile + "_fingerPrintProtection", true);
             case "_adBlock":

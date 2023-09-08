@@ -3,6 +3,7 @@
 - fix: Writing to clipboard from JavaScript doesn't work #853
 - fix: recreation of activity on ui-mode change
 - fix: translate text from context menu with deepL
+- new: third party cookies control
 
 
 ### v 10.0 "Clara Zetkin"

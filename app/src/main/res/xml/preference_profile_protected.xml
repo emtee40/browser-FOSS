@@ -53,10 +53,15 @@
 
         <SwitchPreferenceCompat
             android:defaultValue="false"
+            android:icon="@drawable/icon_cookie"
+            android:key="profileProtected_cookiesThirdParty"
+            android:summary="@string/setting_title_cookie_thirdParty" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
             android:icon="@drawable/icon_dom"
             android:key="profileProtected_dom"
             android:summary="@string/setting_title_dom" />
-
 
         <SwitchPreferenceCompat
             android:defaultValue="false"

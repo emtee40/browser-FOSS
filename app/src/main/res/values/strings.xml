@@ -125,6 +125,7 @@
     <!-- browser start -->
     <string name="setting_title_images">Images</string>
     <string name="setting_title_cookie">Cookies</string>
+    <string name="setting_title_cookie_thirdParty">Third Party Cookies</string>
     <string name="setting_summary_cookie_delete">If enabled, all cookies will be deleted. Also the Cookies of trusted websites.</string>
 
     <string name="setting_title_javascript_popUp">Popups</string>

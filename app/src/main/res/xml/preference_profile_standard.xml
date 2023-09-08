@@ -51,6 +51,12 @@
             android:summary="@string/setting_title_cookie" />
 
         <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/icon_cookie"
+            android:key="profileStandard_cookiesThirdParty"
+            android:summary="@string/setting_title_cookie_thirdParty" />
+
+        <SwitchPreferenceCompat
             android:defaultValue="true"
             android:icon="@drawable/icon_dom"
             android:key="profileStandard_dom"
