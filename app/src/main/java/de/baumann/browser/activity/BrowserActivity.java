@@ -2042,7 +2042,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 
     private void showDialogFilter() {
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
-        View dialogView = View.inflate(context, R.layout.dialog_menu, null);
+        View dialogView = View.inflate(context, R.layout.dialog_menu_filter, null);
         builder.setView(dialogView);
         builder.setTitle(R.string.menu_filter);
         AlertDialog dialog = builder.create();
@@ -2050,7 +2050,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
         HelperUnit.setupDialog(context, dialog);
         CardView cardView = dialogView.findViewById(R.id.albumCardView);
         cardView.setVisibility(View.GONE);
-
 
         GridView menu_grid = dialogView.findViewById(R.id.menu_grid);
         final List<GridItem> gridList = new LinkedList<>();
