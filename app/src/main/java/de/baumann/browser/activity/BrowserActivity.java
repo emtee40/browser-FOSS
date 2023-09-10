@@ -2042,7 +2042,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 
     private void showDialogFilter() {
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
-        View dialogView = View.inflate(context, R.layout.dialog_menu_filter, null);
+        View dialogView = View.inflate(context, R.layout.dialog_menu, null);
         builder.setView(dialogView);
         builder.setTitle(R.string.menu_filter);
         AlertDialog dialog = builder.create();
