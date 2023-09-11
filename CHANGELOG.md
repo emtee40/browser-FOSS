@@ -1,9 +1,12 @@
 ### v 10.2 "" (WIP)
-- fix: translation
+- new: third party cookies control
+- new: stop-loading on progress indicator click
 - fix: Writing to clipboard from JavaScript doesn't work #853
 - fix: recreation of activity on ui-mode change
 - fix: translate text from context menu with deepL
-- new: third party cookies control
+- updated: translation
+- updated: layout
+- updated: libraries
 
 
 ### v 10.0 "Clara Zetkin"
